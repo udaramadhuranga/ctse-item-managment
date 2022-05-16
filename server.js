@@ -24,6 +24,10 @@ connection.once("open", () => {
   console.log("Mongo DB Connection success");
 });
 
+app.route("/").get((req, res) => {
+  res.send("SLIIT SPM");
+});
+
 app.use("/product", productRouter);
 
 app.listen(PORT, () => {
